@@ -24,7 +24,7 @@ export class PetService {
   }
 
   findAll() {
-    return this.petRepository.find();
+    return this.petRepository.find({ relations: ['owner'] });
   }
 
   findOne(id: number) {
